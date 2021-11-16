@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Toy_Robot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWY-Vj-AI0">
+                                <rect key="frame" x="8" y="44.5" width="16" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCr-lh-A9s">
+                                <rect key="frame" x="113.5" y="43.5" width="14.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9at-6n-Tay">
+                                <rect key="frame" x="8" y="64" width="97.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="duQ-gu-zvg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Y Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKE-3T-D6u">
+                                <rect key="frame" x="113.5" y="64" width="97.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3gt-Uu-igq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direction" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-Jg-O96">
+                                <rect key="frame" x="219" y="64" width="97.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EMi-TR-NhG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPw-fk-ui2">
+                                <rect key="frame" x="324.5" y="64" width="97.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w5k-zK-aBc"/>
+                                </constraints>
+                                <state key="normal" title="PLACE"/>
+                                <connections>
+                                    <action selector="btnPressedPlace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFx-wV-hCk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2qL-nN-ENi">
+                                <rect key="frame" x="0.0" y="144" width="20" height="386"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axs-yM-Ian">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKb-A3-Tgr">
+                                        <rect key="frame" x="0.0" y="64.5" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-5E-ovf">
+                                        <rect key="frame" x="0.0" y="129" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr1-dP-EoZ">
+                                        <rect key="frame" x="0.0" y="193.5" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-Ia-ifB">
+                                        <rect key="frame" x="0.0" y="258" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00k-O6-YJ4">
+                                        <rect key="frame" x="0.0" y="322.5" width="20" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="KVZ-b3-WjB"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbw-YO-gf1">
+                                <rect key="frame" x="28" y="144" width="386" height="386"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="THp-gy-r72">
+                                        <rect key="frame" x="8" y="8" width="370" height="370"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="KrP-Vd-KRW">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="61"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-dz-Nny" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-pB-bgk" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-mA-JRM" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nTf-pZ-Dyl" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-UA-nF0" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="76J-qB-g80" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6wO-Mo-S5t">
+                                                <rect key="frame" x="0.0" y="62" width="370" height="60.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szr-G8-V4a" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WR0-YI-sU2" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-61-mcl" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-e3-6cP" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-WC-OXv" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n9F-5f-iFn" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MqK-YY-idl">
+                                                <rect key="frame" x="0.0" y="123.5" width="370" height="61"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-2s-obU" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-7h-hnc" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="keg-lD-dFq" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysg-L1-ivs" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-rl-21r" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivf-JH-E4Q" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-Xf-Jbp">
+                                                <rect key="frame" x="0.0" y="185.5" width="370" height="61"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AsL-r3-s9N" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b6s-Iw-39x" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBC-eJ-Bqn" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-Py-FxW" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-1Y-eJz" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-fV-fNG" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kth-kM-xGW">
+                                                <rect key="frame" x="0.0" y="247.5" width="370" height="60.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-E7-5W7" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYM-ZP-Y8K" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htF-6p-cYo" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQ5-ns-vFO" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-qX-xbv" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="60.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="83K-oT-rpl" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="60.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="V69-iU-lf0">
+                                                <rect key="frame" x="0.0" y="309" width="370" height="61"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-MG-hgl" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-1p-QhC" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yfb-wH-ZbI" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lam-Pl-EA9" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="185.5" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-QZ-sgJ" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="247.5" y="0.0" width="60.5" height="61"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-fx-bql" customClass="BoardBlockView" customModule="Toy_Robot" customModuleProvider="target">
+                                                        <rect key="frame" x="309" y="0.0" width="61" height="61"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="THp-gy-r72" secondAttribute="bottom" constant="8" id="765-PS-IHb"/>
+                                    <constraint firstItem="THp-gy-r72" firstAttribute="top" secondItem="nbw-YO-gf1" secondAttribute="top" constant="8" id="Wxa-vs-Amk"/>
+                                    <constraint firstItem="THp-gy-r72" firstAttribute="leading" secondItem="nbw-YO-gf1" secondAttribute="leading" constant="8" id="a8U-IB-Wew"/>
+                                    <constraint firstAttribute="width" secondItem="nbw-YO-gf1" secondAttribute="height" multiplier="1:1" id="fr0-xz-PzH"/>
+                                    <constraint firstAttribute="trailing" secondItem="THp-gy-r72" secondAttribute="trailing" constant="8" id="sTH-fA-r5u"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TXD-tp-lsx">
+                                <rect key="frame" x="28" y="538" width="386" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tum-RY-4Qf">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-zy-Yrk">
+                                        <rect key="frame" x="64.5" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PZ-OF-4I5">
+                                        <rect key="frame" x="129" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXN-rg-AgP">
+                                        <rect key="frame" x="193.5" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ent-GB-N04">
+                                        <rect key="frame" x="258" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsF-l5-qtM">
+                                        <rect key="frame" x="322.5" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-kL-IoF">
+                                <rect key="frame" x="8" y="618.5" width="127.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0qV-xD-2gg"/>
+                                </constraints>
+                                <state key="normal" title="LEFT"/>
+                                <connections>
+                                    <action selector="btnPressedLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYE-M3-79h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEp-7H-Drh">
+                                <rect key="frame" x="143.5" y="618.5" width="127" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="acC-8m-7uV"/>
+                                </constraints>
+                                <state key="normal" title="RIGHT"/>
+                                <connections>
+                                    <action selector="btnPressedRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C9J-p3-YnO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pi4-6L-P0W">
+                                <rect key="frame" x="278.5" y="618.5" width="127.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kvs-6s-7ur"/>
+                                </constraints>
+                                <state key="normal" title="MOVE"/>
+                                <connections>
+                                    <action selector="btnPressedMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Sv-aY-kYn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nbw-YO-gf1" secondAttribute="trailing" id="5LN-Iu-9kc"/>
+                            <constraint firstItem="nbw-YO-gf1" firstAttribute="leading" secondItem="2qL-nN-ENi" secondAttribute="trailing" constant="8" id="7Jc-17-U2g"/>
+                            <constraint firstItem="Pi4-6L-P0W" firstAttribute="top" secondItem="TXD-tp-lsx" secondAttribute="bottom" constant="60" id="8bu-LQ-mL0"/>
+                            <constraint firstItem="9at-6n-Tay" firstAttribute="leading" secondItem="SWY-Vj-AI0" secondAttribute="leading" id="9Xn-q6-zzm"/>
+                            <constraint firstItem="U6P-Jg-O96" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Bm2-V0-Aml"/>
+                            <constraint firstItem="yPw-fk-ui2" firstAttribute="leading" secondItem="U6P-Jg-O96" secondAttribute="trailing" constant="8" id="E0y-uR-at6"/>
+                            <constraint firstItem="nKE-3T-D6u" firstAttribute="leading" secondItem="WCr-lh-A9s" secondAttribute="leading" id="FRY-Af-mwT"/>
+                            <constraint firstItem="nbw-YO-gf1" firstAttribute="top" secondItem="9at-6n-Tay" secondAttribute="bottom" constant="30" id="Fze-gU-c1f"/>
+                            <constraint firstItem="9at-6n-Tay" firstAttribute="top" secondItem="SWY-Vj-AI0" secondAttribute="bottom" constant="-1" id="IPI-fn-Kzx"/>
+                            <constraint firstItem="9at-6n-Tay" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="J1k-gF-PJp"/>
+                            <constraint firstItem="nKE-3T-D6u" firstAttribute="leading" secondItem="9at-6n-Tay" secondAttribute="trailing" constant="8" id="KFd-Ap-1OI"/>
+                            <constraint firstItem="yPw-fk-ui2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="O8b-t5-ruS"/>
+                            <constraint firstItem="mEp-7H-Drh" firstAttribute="width" secondItem="dLr-kL-IoF" secondAttribute="width" id="Oe6-XZ-lmj"/>
+                            <constraint firstItem="nKE-3T-D6u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OfU-HX-fXC"/>
+                            <constraint firstItem="U6P-Jg-O96" firstAttribute="leading" secondItem="nKE-3T-D6u" secondAttribute="trailing" constant="8" id="PeG-d0-1bD"/>
+                            <constraint firstItem="mEp-7H-Drh" firstAttribute="top" secondItem="TXD-tp-lsx" secondAttribute="bottom" constant="60" id="QZ1-Ve-Lm4"/>
+                            <constraint firstItem="TXD-tp-lsx" firstAttribute="leading" secondItem="nbw-YO-gf1" secondAttribute="leading" id="WHc-Sc-SE5"/>
+                            <constraint firstItem="dLr-kL-IoF" firstAttribute="top" secondItem="TXD-tp-lsx" secondAttribute="bottom" constant="60" id="X8F-GS-TMC"/>
+                            <constraint firstItem="nbw-YO-gf1" firstAttribute="bottom" secondItem="2qL-nN-ENi" secondAttribute="bottom" id="ag5-H4-aL5"/>
+                            <constraint firstItem="nKE-3T-D6u" firstAttribute="top" secondItem="WCr-lh-A9s" secondAttribute="bottom" id="cVv-ix-toB"/>
+                            <constraint firstItem="yPw-fk-ui2" firstAttribute="width" secondItem="9at-6n-Tay" secondAttribute="width" id="faj-xa-yz3"/>
+                            <constraint firstItem="mEp-7H-Drh" firstAttribute="leading" secondItem="dLr-kL-IoF" secondAttribute="trailing" constant="8" id="h7M-rj-3U0"/>
+                            <constraint firstItem="2qL-nN-ENi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hgi-UN-epv"/>
+                            <constraint firstItem="Pi4-6L-P0W" firstAttribute="leading" secondItem="mEp-7H-Drh" secondAttribute="trailing" constant="8" id="qHn-ji-izO"/>
+                            <constraint firstItem="dLr-kL-IoF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qKs-Bx-0TW"/>
+                            <constraint firstItem="Pi4-6L-P0W" firstAttribute="width" secondItem="dLr-kL-IoF" secondAttribute="width" id="tKa-CR-J9t"/>
+                            <constraint firstItem="yPw-fk-ui2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tUh-NI-gDo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pi4-6L-P0W" secondAttribute="trailing" constant="8" id="u8r-2x-Go4"/>
+                            <constraint firstItem="U6P-Jg-O96" firstAttribute="width" secondItem="9at-6n-Tay" secondAttribute="width" id="uSH-l9-359"/>
+                            <constraint firstItem="TXD-tp-lsx" firstAttribute="top" secondItem="nbw-YO-gf1" secondAttribute="bottom" constant="8" id="veK-rX-W0W"/>
+                            <constraint firstItem="nbw-YO-gf1" firstAttribute="top" secondItem="2qL-nN-ENi" secondAttribute="top" id="wwe-wM-G4M"/>
+                            <constraint firstItem="TXD-tp-lsx" firstAttribute="trailing" secondItem="nbw-YO-gf1" secondAttribute="trailing" id="ysY-2o-Gra"/>
+                            <constraint firstItem="nKE-3T-D6u" firstAttribute="width" secondItem="9at-6n-Tay" secondAttribute="width" id="zKW-Hg-Asc"/>
+                            <constraint firstItem="9at-6n-Tay" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="zcc-3N-cBg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u5W-D0-76H" appends="YES" id="EA6-eL-EH8"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="board" destination="THp-gy-r72" id="cug-jb-gaU"/>
+                        <outlet property="btnLeft" destination="dLr-kL-IoF" id="uaP-E5-b6c"/>
+                        <outlet property="btnMove" destination="Pi4-6L-P0W" id="if7-pc-GMe"/>
+                        <outlet property="btnPlace" destination="yPw-fk-ui2" id="lcx-CE-CIW"/>
+                        <outlet property="btnRight" destination="mEp-7H-Drh" id="BSy-Tv-pz5"/>
+                        <outlet property="txtFieldDirection" destination="U6P-Jg-O96" id="BlZ-Uj-xXN"/>
+                        <outlet property="txtFieldXValue" destination="9at-6n-Tay" id="23j-UU-DOe"/>
+                        <outlet property="txtFieldYValue" destination="nKE-3T-D6u" id="6Ws-bL-fUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="u5W-D0-76H">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="AY6-em-3Md"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
