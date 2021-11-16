@@ -56,39 +56,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private let maxRowsColumns: Int = 6
-    private var robot: RobotModel?
-    private var xValue: Int? {
-        didSet {
-            txtFieldXValue.text = String(xValue ?? 0)
-            updateButtonStatus()
-        }
-    }
-    private var yValue: Int? {
-        didSet {
-            txtFieldYValue.text = String(yValue ?? 0)
-            updateButtonStatus()
-        }
-    }
-    private var direction: Direction? {
-        didSet {
-            txtFieldDirection.text = direction?.rawValue
-            updateButtonStatus()
-        }
-    }
-    private var isRobotOnBoard: Bool = false {
+    private var robot: RobotModel? {
         didSet {
             updateButtonStatus()
         }
     }
-    
-    private var isValidXValue: Bool {
-        guard let val = xValue else { return false }
-        return val < maxRowsColumns
-    }
-    private var isValidYValue: Bool {
-        guard let val = yValue else { return false }
-        return val < maxRowsColumns
-    }
+    private var isRobotOnBoard: Bool { robot != nil }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,35 +75,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK:- Helper methods
     
     private func updateButtonStatus() {
-        btnPlace.isEnabled = txtFieldXValue.text != nil && txtFieldYValue.text != nil && direction != nil
-        btnLeft.isEnabled = isRobotOnBoard
-        btnRight.isEnabled = isRobotOnBoard
-        if isRobotOnBoard {
-            guard let d = direction else { return }
-            switch d {
+        btnPlace.isEnabled = txtFieldXValue.text != nil && txtFieldYValue.text != nil && txtFieldDirection.text != nil
+        if let r = robot {
+            btnLeft.isEnabled = true
+            btnRight.isEnabled = true
+            switch r.direction {
             case .north:
-                btnMove.isEnabled = (yValue ?? 0) < 5
+                btnMove.isEnabled = r.yValue < 5
                 break
             case .east:
-                btnMove.isEnabled = (xValue ?? 0) < 5
+                btnMove.isEnabled = r.xValue < 5
                 break
             case .south:
-                btnMove.isEnabled = (yValue ?? 0) > 0
+                btnMove.isEnabled = r.yValue > 0
                 break
             case .west:
-                btnMove.isEnabled = (xValue ?? 0) > 0
+                btnMove.isEnabled = r.xValue > 0
                 break
             }
         } else {
+            btnLeft.isEnabled = false
+            btnRight.isEnabled = false
             btnMove.isEnabled = false
         }
     }
     
-    private func updateRobot() {
+    private func updateBoard() {
         guard
-            let x = xValue,
-            let y = yValue,
-            let d = direction
+            let x = robot?.xValue,
+            let y = robot?.yValue,
+            let d = robot?.direction
             else { return }
         
         board
@@ -141,7 +115,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             .forEach {
                 $0.image = $0.xPosition == x && $0.yPosition == y ? d.image : nil
         }
-        isRobotOnBoard = true
     }
     
     //MARK:- UITextField methods
@@ -150,8 +123,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if textField == txtFieldDirection {
             let alert = UIAlertController(title: "Direction", message: nil, preferredStyle: .actionSheet)
             Direction.allCases.forEach { d in
-                let action = UIAlertAction(title: d.rawValue, style: .default, handler: { [weak self] _ in
-                    self?.direction = d
+                let action = UIAlertAction(title: d.rawValue, style: .default, handler: { _ in
+                    textField.text = d.rawValue
                 })
                 alert.addAction(action)
             }
@@ -173,21 +146,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnPressedPlace(_ sender: UIButton) {
         var errorMessages = [String]()
-        
+        var x: Int!
+        var y: Int!
+        var direction: Direction!
         
         if let text = txtFieldXValue.text, let val = Int(text), val < maxRowsColumns {
-            xValue = val
+            x = val
         } else {
             errorMessages.append("X Value should be between 0-5")
         }
         if let text = txtFieldYValue.text, let val = Int(text), val < maxRowsColumns {
-            yValue = val
+            y = val
         } else {
             errorMessages.append("Y Value should be between 0-5")
         }
+        if let text = txtFieldDirection.text, let val = Direction(rawValue: text) {
+            direction = val
+        }
         
         if errorMessages.isEmpty {
-            updateRobot()
+            robot = RobotModel(xValue: x, yValue: y, direction: direction)
+            updateBoard()
         } else {
             let alert = UIAlertController(title: "Error", message: errorMessages.joined(separator: "\n"), preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -197,32 +176,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnPressedRight(_ sender: UIButton) {
-        direction = direction?.right
-        updateRobot()
+        robot?.turnRight()
+        updateBoard()
     }
     
     @IBAction func btnPressedLeft(_ sender: UIButton) {
-        direction = direction?.left
-        updateRobot()
+        robot?.turnLeft()
+        updateBoard()
     }
     
     @IBAction func btnPressedMove(_ sender: UIButton) {
-        guard let d = direction else { return }
-        switch d {
-        case .north:
-            yValue = (yValue ?? 0) + 1
-            break
-        case .east:
-            xValue = (xValue ?? 0) + 1
-            break
-        case .south:
-            yValue = (yValue ?? 0) - 1
-            break
-        case .west:
-            xValue = (xValue ?? 0) - 1
-            break
-        }
-        updateRobot()
+        robot?.move()
+        updateBoard()
     }
 }
 
